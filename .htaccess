@@ -1,0 +1,88 @@
+RewriteEngine On
+#trang-chu
+RewriteRule ^home$ index.php
+#dangky
+RewriteRule ^dangkythi$ index.php?controller=DangKyThi
+#indangky
+RewriteRule ^indangky$ index.php?controller=InDangKy
+#login
+RewriteRule ^dang-nhap$ index.php?controller=Login
+
+#profile
+RewriteRule ^ho-so-sinh-vien$ index.php?controller=Profile
+
+#dologin
+RewriteRule ^dologin$ index.php?controller=Login&action=doLogin
+
+#repass
+RewriteRule ^doi-mat-khau$ index.php?controller=RePass&action=edit
+
+#them dangky
+RewriteRule ^addmonthi$ index.php?controller=DangKyThi&action=add
+
+#update lai so luong
+RewriteRule ^update-soluong$ index.php?controller=DangKyThi&action=update
+
+#xoa ca thi
+RewriteRule ^xoa-cathi$ index.php?controller=DangKyThi&action=deleteCaThi
+
+#admin
+RewriteRule ^admin$ index.php?area=Admin
+
+#login admin
+RewriteRule ^admin-login$ index.php?area=Admin&controller=Login
+
+#re login
+RewriteRule ^login-admin$ index.php?area=Admin&controller=Login&action=doLogin
+
+#tao ki
+RewriteRule ^tao-ki-thi$ index.php?area=Admin&controller=TaoKi
+
+#show ds sinh vien
+RewriteRule ^dssv$ index.php?area=Admin&controller=ListStudent
+
+#tao ca
+#RewriteRule ^tao-ca-thi/(.*)$ index.php?area=Admin&controller=TaoCa&id=$1
+RewriteRule ^tao-ca-thi$ index.php?area=Admin&controller=TaoCa
+
+#list ca thi
+RewriteRule ^danhsach-cathi$ index.php?area=Admin&controller=TaoCa&action=ListCa
+
+
+#them sinh vien cam dang ky thi
+RewriteRule ^them-sv-cam-thi$ index.php?area=Admin&controller=AddNotEligibleStudent
+
+
+#them du dieu kien thi
+RewriteRule ^them-sv-du-dieu-kien-thi$ index.php?area=Admin&controller=AddEligibleStudent
+
+
+#them danh sach sinh vien
+RewriteRule ^them-danh-sach-sinh-vien$ index.php?area=Admin&controller=AddUserStudent
+
+#list sinh vien
+RewriteRule ^danh-sach-sinh-vien$ index.php?area=Admin&controller=UserSinhVien&action=listUserSv
+
+#user admin
+RewriteRule ^user-admin$ index.php?area=Admin&controller=UserAdmin
+
+#in danh sach thi
+RewriteRule ^in-danh-sach-thi$ index.php?area=Admin&controller=PrintListExam
+
+#Show môn Hệ quản trị được thi
+RewriteRule ^danh-sach-hqt-duoc-thi$ index.php?area=Admin&controller=ShowSubject&action=showHqt1
+
+#Show môn Hệ quản trị cấm thi
+RewriteRule ^danh-sach-hqt-cam-thi$ index.php?area=Admin&controller=ShowSubject&action=showHqt0
+
+#Show môn Web được thi
+RewriteRule ^danh-sach-web-duoc-thi$ index.php?area=Admin&controller=ShowSubject&action=showWeb1
+
+#Show môn Web cấm thi
+RewriteRule ^danh-sach-web-cam-thi$ index.php?area=Admin&controller=ShowSubject&action=showWeb0
+
+#Show môn Trí tuệ nhân tạo được thi
+RewriteRule ^danh-sach-AI-duoc-thi$ index.php?area=Admin&controller=ShowSubject&action=showAI1
+
+#Show môn Trí tuệ nhân tạo cấm thi
+RewriteRule ^danh-sach-AI-cam-thi$ index.php?area=Admin&controller=ShowSubject&action=showAI0
